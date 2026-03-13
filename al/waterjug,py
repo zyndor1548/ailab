@@ -1,29 +1,8 @@
-"""
-Water Jug Problem Solver
-
-This program solves the classic water jug problem using Depth-First Search (DFS).
-The problem involves two jugs of different capacities and a target amount of water to measure.
-
-The jugs can be filled, emptied, or poured into each other. The goal is to find a sequence
-of operations to reach the target amount in one of the jugs.
-
-This implementation uses DFS to explore possible states and find a solution path.
-"""
 
 from collections import deque
 
 def dfs_water_jug(cap4, cap3, goal):
-    """
-    Solves the water jug problem using DFS.
-
-    Args:
-    cap4 (int): Capacity of the 4-liter jug.
-    cap3 (int): Capacity of the 3-liter jug.
-    goal (int): Target amount of water to measure.
-
-    Returns:
-    list or None: List of states representing the solution path, or None if no solution.
-    """
+    
     stack = [(0, 0, [])]  # (jug4, jug3, path)
     visited = set()
     visited.add((0, 0))
